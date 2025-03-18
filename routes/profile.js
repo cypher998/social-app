@@ -60,7 +60,7 @@ profileRouter.post("/follow/:targetid", auth, async (req, res) => {
     if (!user) {
       return res.json({message:"user didn't exist"})
       } 
-      if(user.following.includes(targetid)) {
+    if(user.following.includes(targetid)) {
         return  res.json({message:"you already followed that account"})}
       
         user.following.push(targetid);
@@ -74,5 +74,13 @@ profileRouter.post("/follow/:targetid", auth, async (req, res) => {
     res.json({ error: e.message });
   }
 });
+
+
+postRouter.post("/unfollow/:targetid" , auth ,async (req,res)=>{
+  const userid=req.user.id;
+  const target=req.params.id
+
+
+})
 
 module.exports = { profileRouter: profileRouter };

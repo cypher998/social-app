@@ -2,7 +2,7 @@ const {Router} = require("express")
 const {auth} = require("../authorization/auth")
 const {postModel} = require("../model/postmodel")
 const postRouter=Router()
- // create the  posts
+ //create the  posts
 postRouter.post("/create" , auth,async (req , res)=>{
 
  try{    const {caption , media} = req.body
@@ -12,7 +12,7 @@ postRouter.post("/create" , auth,async (req , res)=>{
       userid:userid,
       caption:caption,
          media:media,
-         // fdshfksdjhfskjfhksjfhskdfhd
+         
          
      })
      res.status(201).json({message:"post created successfully"})
