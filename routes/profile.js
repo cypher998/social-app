@@ -40,7 +40,7 @@ profileRouter.put("/update", auth, async (req, res) => {
       res.status(404).json({ messgae: "profile didn't exist" });
     }
   } catch (e) {
-    res.json({ error: e.message });
+    return res.json({ error: e.message });
   }
 });
 

@@ -1,6 +1,8 @@
 
 const {userModel} =require( "../model/usermodel")
-
+const bcrypt=require("bcrypt")
+const jwt= require("jsonwebtoken")
+const jwt_secret="qwerty"
 const  Signup= async (req , res)=>{
     try{ 
        const {email , password , DateofBirth}=req.body

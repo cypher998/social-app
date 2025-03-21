@@ -9,7 +9,7 @@ const post = new Schema({
   caption: { type: String, default: "" },
   comments: [
     {
-      userId: { type: mongoose.Schema.Types.ObjectId, ref: "user" },
+      Id: { type: mongoose.Schema.Types.ObjectId, ref: "user" },
       text: { type: String, required: true },
       createdAt: { type: Date, default: Date.now },
     },
